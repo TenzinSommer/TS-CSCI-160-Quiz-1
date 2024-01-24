@@ -1,0 +1,28 @@
+public static void plusMinus(List<Integer> arr) {
+    // Write your code here
+        
+        double arrayLength = arr.size();
+        double positiveCount = 0;
+        double negativeCount = 0;
+        double zeroCount = 0;
+        
+        for (Integer i : arr) {
+            if (i > 0) {
+                positiveCount += 1;
+            }
+            else if (i < 0) {
+                negativeCount += 1;
+            }
+            else {
+                zeroCount += 1;
+            }
+        }
+        
+        String stringOne = String.format("%6f", positiveCount / arrayLength);
+        String stringTwo = String.format("%6f", negativeCount / arrayLength);
+        String stringThree = String.format("%6f", zeroCount / arrayLength);
+        
+        System.out.println(stringOne);
+        System.out.println(stringTwo);
+        System.out.println(stringThree);
+    }
